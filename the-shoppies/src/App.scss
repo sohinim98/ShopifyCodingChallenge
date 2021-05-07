@@ -1,4 +1,22 @@
+@import url("https://use.typekit.net/drz2vvu.css");
 @import "vars.scss";
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "proxima-nova", sans-serif
+}
 
 :root {
   background: var(--base--grey);

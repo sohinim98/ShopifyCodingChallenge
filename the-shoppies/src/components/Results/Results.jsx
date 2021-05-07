@@ -10,6 +10,7 @@ export const Results = (props) => {
         setMovieResults(props.movies);
     }, [props.movies]);
     const editNominations = (movie, op) => {
+        console.log('hi', op);
         if (op === 'add') {
             if (nominationsNum < 5 ) {
                 setNominationsList([...nominationsList, movie]);
@@ -44,7 +45,7 @@ export const Results = (props) => {
                         </ul>
                     ) : 'Loading...'}
                 </div>
-                <Nominations nominationsList={nominationsList} editNominations={editNominations}/>
+                <Nominations nominationsList={nominationsList} editNominations={editNominations} nominationsNum={nominationsNum}/>
             </section>
         );
     } else {

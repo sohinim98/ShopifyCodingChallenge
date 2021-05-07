@@ -12,6 +12,11 @@
   .nominations--header {
     padding-left: var(--spacer--sm);
   }
+  .nominations--banner {
+    background: var(--base--green);
+    color: var(--base--white);
+    padding: var(--spacer--sm);
+  }
   .nominations--entry {
     display: flex;
     &::before {
