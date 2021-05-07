@@ -1,0 +1,55 @@
+@import "../../vars.scss";
+@import url("https://use.typekit.net/drz2vvu.css");
+
+h1, h2 {
+  margin: 0;
+}
+
+.sign-up {
+  align-items: center;
+  background: var(--base--black);
+  color: var(--base--white);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+  line-height: 2.8;
+
+  .sign-up--error {
+    color: var(sign-up--error);
+  }
+  .sign-up--option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .sign-up--input {
+    border-radius: var(--border-radius--lg);
+    font-size: 17px;
+    padding: 4px;
+    width: 246px;
+  }
+  .sign-up--primary,
+  .sign-up--secondary {
+      border-radius: var(--border-radius--lg);
+      color: var(--base--white);
+      cursor: pointer;
+      font: 12px/15px "Proxima Nova", sans-serif;
+      font-weight: 600;
+      margin-left: 5px;
+      min-width: 65px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+  }
+  .sign-up--primary {
+    background: var(--base--green--dark);
+    border: none;
+  }
+  .sign-up--secondary {
+    background: none;
+    border: 1px solid var(--base--white);
+    margin-top: var(--spacer--sm);
+  }
+}

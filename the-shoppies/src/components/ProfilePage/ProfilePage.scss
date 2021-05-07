@@ -1,0 +1,46 @@
+@import "../../vars.scss";
+@import url("https://use.typekit.net/drz2vvu.css");
+
+.profile {
+  background: var(--base--green);
+  color: var(--base--white);
+
+  .profile--avatar {
+    border-radius: 50%;
+    height: 200px;
+    margin: var(--spacer--lg);
+  }
+  .profile--content {
+    margin: 0 var(--spacer--lg);
+  }
+  .profile--sign-out {
+    background: none;
+    border: 1px solid var(--base--white);
+    border-radius: var(--border-radius--lg);
+    color: var(--base--white);
+    cursor: pointer;
+    font: 12px/15px "Proxima Nova", sans-serif;
+    font-weight: 600;
+    min-width: 65px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+}
+
+.profile--editor {
+  background: var(--base--grey--dark);
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .profile {
+    height: 100%;
+    position: fixed;
+    width: 20%;
+  }
+  .profile--editor {
+    float: right;
+    min-height: 100vh;
+    width: 80%;
+  }
+}

@@ -1,5 +1,4 @@
 @import url("https://use.typekit.net/drz2vvu.css");
-@import "vars.scss";
 
 html {
   scroll-behavior: smooth;
@@ -16,17 +15,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "proxima-nova", sans-serif
-}
-
-:root {
-  background: var(--base--grey);
-  height: 100%;
-}
-.main {
-  max-width: 100%;
-  width: 1048px;
-  margin: var(--spacer--sm) auto;
-  .main--header {
-   padding: var(--spacer--lg) 0 0 var(--spacer--lg);
-  }
 }

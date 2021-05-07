@@ -1,0 +1,16 @@
+@import "../../vars.scss";
+:root {
+  background: var(--base--grey);
+  height: 100%;
+}
+.main {
+  display: flex;
+  .main--content {
+    max-width: 80%;
+    width: 1048px;
+    margin: var(--spacer--sm) auto;
+    .main--header {
+      padding: var(--spacer--lg) 0 0 var(--spacer--lg);
+    }
+  }
+}

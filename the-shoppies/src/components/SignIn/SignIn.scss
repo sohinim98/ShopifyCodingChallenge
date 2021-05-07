@@ -1,0 +1,59 @@
+@import "../../vars.scss";
+@import url("https://use.typekit.net/drz2vvu.css");
+
+h1, h2 {
+  margin: 0;
+}
+
+.sign-in {
+  align-items: center;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+  line-height: 2.8;
+
+  .sign-in--logo {
+    height: 100px;
+  }
+
+  .sign-in--error {
+    color: var(sign-in--error);
+  }
+  .sign-in--option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .sign-in--input {
+    border-radius: var(--border-radius--lg);
+    font-size: 17px;
+    padding: 4px;
+    width: 246px;
+  }
+  .sign-in--primary,
+  .sign-in--secondary {
+      border-radius: var(--border-radius--lg);
+      cursor: pointer;
+      font: 12px/15px "Proxima Nova", sans-serif;
+      font-weight: 600;
+      margin-left: 5px;
+      min-width: 65px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+  }
+  .sign-in--primary {
+    background: var(--base--green--light);
+    border: none;
+    color: var(--base--white);
+  }
+  .sign-in--secondary {
+    background: none;
+    border: 1px solid var(--text);
+    margin-top: var(--spacer--sm);
+  }
+}
