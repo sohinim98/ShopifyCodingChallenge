@@ -1,0 +1,15 @@
+.movie--search {
+  border-radius: 20px;
+  display: flex;
+  height: 33px;
+  margin: var(--spacer--sm) auto;
+  max-width: 90%;
+  padding: 4px 8px;
+  width: 1012px;
+}
+.movie--input {
+  border: none;
+  font-size: 17px;
+  max-width: 90%;
+  width: 1012px;
+}
