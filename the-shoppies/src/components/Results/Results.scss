@@ -1,22 +1,33 @@
 @import "../../vars.scss";
-.results {
-  background: var(--base--white);
-  border: 1px solid var(--border--color);
-  border-radius: var(--border-radius--sm);
+.results-container {
+  align-items: flex-start;
   display: flex;
-  flex-direction: column;
-  max-width: 90%;
+  justify-content: space-between;
   margin: var(--spacer--sm) auto;
-  padding: var(--spacer--sm);
-  width: 548px;
-
-  .results--entry {
+  width: 1048px;
+  .results {
+    background: var(--base--white);
+    border: 1px solid var(--border--color);
+    border-radius: var(--border-radius--sm);
     display: flex;
-    .results--button {
-      border-radius: var(--border-radius--sm);
-      cursor: pointer;
-      height: 36px;
-      margin-left: var(--spacer--sm);
+    flex-direction: column;
+    max-width: 90%;
+    padding: var(--spacer--sm);
+    width: 548px;
+
+    .results--entry {
+      display: flex;
+      &::before {
+        content: '\2022';
+        font-size: 38px;
+        padding-right: 2px;
+      }
+      .results--button {
+        border-radius: var(--border-radius--sm);
+        cursor: pointer;
+        height: 36px;
+        margin-left: var(--spacer--sm);
+      }
     }
   }
 }

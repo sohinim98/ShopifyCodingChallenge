@@ -4,7 +4,10 @@ import Search from './components/Search/Search'
 
 export const App = () => {
   return (
-    <Search />
+      <section className="main">
+        <h1 className="main--header">The Shoppies</h1>
+        <Search />
+      </section>
   );
 }
 

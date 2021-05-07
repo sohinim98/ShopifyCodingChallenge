@@ -17,18 +17,20 @@ export const Results = (props) => {
     }
     if (props.query.length > 0) {
         return (
-            <section>
+            <section className="results-container">
                 <div className="results">
                     <h2>Results for "{props.query}"</h2>
                     { movieResults?.length > 0 ? (
-                        movieResults.map(movie => {
+                        <ul>
+                            {movieResults.map(movie => {
                             return (
-                                <div className="results--entry">
-                                    <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                                    <button onClick={() => addNominations(movie)} className="results--button">Nominate</button>
-                                </div>
+                            <li className="results--entry">
+                            <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
+                            <button onClick={() => addNominations(movie)} className="results--button">Nominate</button>
+                            </li>
                             )
-                        })
+                        })}
+                        </ul>
                     ) : 'Loading...'}
                 </div>
                 <Nominations nominationsList={nominationsList}/>

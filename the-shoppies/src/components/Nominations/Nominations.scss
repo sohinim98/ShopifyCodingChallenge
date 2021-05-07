@@ -1,1 +1,29 @@
+@import "../../vars.scss";
+.nominations {
+  background: var(--base--white);
+  border: 1px solid var(--border--color);
+  border-radius: var(--border-radius--sm);
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto var(--spacer--sm);
+  width: 388px;
 
+  .nominations--header {
+    padding-left: var(--spacer--sm);
+  }
+  .nominations--entry {
+    display: flex;
+    &::before {
+      content: '\2022';
+      font-size: 38px;
+      padding-right: 2px;
+    }
+    .nominations--button {
+      border-radius: var(--border-radius--sm);
+      cursor: pointer;
+      height: 36px;
+      margin-left: var(--spacer--sm);
+    }
+  }
+}
