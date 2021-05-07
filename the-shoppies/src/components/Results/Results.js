@@ -22,11 +22,11 @@ export const Results = (props) => {
                     <h2>Results for "{props.query}"</h2>
                     { movieResults?.length > 0 ? (
                         <ul>
-                            {movieResults.map(movie => {
+                            {movieResults.map(movie  => {
                             return (
                             <li className="results--entry">
                             <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                            <button onClick={() => addNominations(movie)} className="results--button">Nominate</button>
+                            <button onClick={() => addNominations(movie)} className="results--button" disabled={nominationsList.includes(movie)}>Nominate</button>
                             </li>
                             )
                         })}
