@@ -1,2 +1,23 @@
+@import "../../vars.scss";
+.results {
+  background: var(--base--white);
+  border: 1px solid var(--border--color);
+  border-radius: var(--border-radius--sm);
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: var(--spacer--sm) auto;
+  padding: var(--spacer--sm);
+  width: 548px;
 
+  .results--entry {
+    display: flex;
+    .results--button {
+      border-radius: var(--border-radius--sm);
+      cursor: pointer;
+      height: 36px;
+      margin-left: var(--spacer--sm);
+    }
+  }
+}
 

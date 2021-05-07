@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import './Search.scss';
-import Results from '../Results/Results'
+import Results from '../Results/Results';
 import searchIcon from '../../assets/search.png';
 
 export const Search = () => {
@@ -20,8 +20,8 @@ export const Search = () => {
                 .get(`http://www.omdbapi.com/?apikey=83ecb157&s=${event}&type=movie`)
                 .then(res => {
                     if (res.status === 200) {
-                        setMovies(res.data.Search)
-                        console.log('these', movies)
+                        const resUnique =  res.data.Search.filter((movie, index) => res.data.Search.findIndex(obj => obj.imdbID === movie.imdbID) === index);
+                        setMovies(resUnique);
                     }
                 })
                 .catch(error => {
@@ -31,14 +31,16 @@ export const Search = () => {
     }
     return (
         <section>
-            <h2>Movie title</h2>
-            <div className="movie--search">
-                <img src={searchIcon} className="movie--search--icon" alt="Search Icon"/>
-                <input
-                    onChange={event => setQuery(event.target.value)}
-                    className="movie--input"
-                    placeholder="Search..."
-                />
+            <div className="search">
+                <h2 className="search--header">Movie title</h2>
+                <div className="search--bar">
+                    <img src={searchIcon} className="search--icon" alt="Search Icon"/>
+                    <input
+                        onChange={event => setQuery(event.target.value)}
+                        className="search--input"
+                        placeholder="Search..."
+                    />
+                </div>
             </div>
             <Results movies={movies} query={query}/>
         </section>
