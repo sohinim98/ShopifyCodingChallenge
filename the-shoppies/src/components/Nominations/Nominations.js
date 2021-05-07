@@ -7,7 +7,6 @@ export const Nominations = (props) => {
     useEffect(() => {
         setNominationsList(props.nominationsList);
     }, [props.nominationsList]);
-    const removeNominations = (movie) => {}
     return (
         <section className="nominations">
             <h2 className="nominations--header">Nominations</h2>
@@ -16,7 +15,7 @@ export const Nominations = (props) => {
                     return (
                         <li className="nominations--entry">
                             <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                            <button onClick={() => removeNominations(movie)} className="nominations--button">Remove</button>
+                            <button onClick={() => props.editNominations(movie, 'remove')} className="nominations--button">Remove</button>
                         </li>
                     )
                 })}

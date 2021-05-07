@@ -9,10 +9,21 @@ export const Results = (props) => {
     useEffect(() => {
         setMovieResults(props.movies);
     }, [props.movies]);
-    const addNominations = (movie) => {
-        if (nominationsNum < 5 ) {
-            setNominationsList([...nominationsList, movie]);
-            setNominationsNum(nominationsNum+1);
+    const editNominations = (movie, op) => {
+        if (op === 'add') {
+            if (nominationsNum < 5 ) {
+                setNominationsList([...nominationsList, movie]);
+                setNominationsNum(nominationsNum+1);
+            }
+        }
+        else {
+            let newNominationList = [...nominationsList];
+            const index = newNominationList.indexOf(movie)
+            if (index !== -1) {
+                newNominationList.splice(index, 1);
+                setNominationsList(newNominationList);
+            }
+            setNominationsNum(nominationsNum-1);
         }
     }
     if (props.query.length > 0) {
@@ -26,14 +37,14 @@ export const Results = (props) => {
                             return (
                             <li className="results--entry">
                             <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                            <button onClick={() => addNominations(movie)} className="results--button" disabled={nominationsList.includes(movie)}>Nominate</button>
+                            <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.includes(movie)}>Nominate</button>
                             </li>
                             )
                         })}
                         </ul>
                     ) : 'Loading...'}
                 </div>
-                <Nominations nominationsList={nominationsList}/>
+                <Nominations nominationsList={nominationsList} editNominations={editNominations}/>
             </section>
         );
     } else {
