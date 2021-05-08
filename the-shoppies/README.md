@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# The Shoppies
+## Deployed using Firebase at [https://the-shoppies-dbf55.web.app/](https://the-shoppies-dbf55.web.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- I used Firebase authentication and Firestore to store the user data (display name, email, profile photo and nominations).
+- I used Firebase hosting to deploy the application.
+
+## Bonus features
+- Save nomination lists if the user leaves the page/logs out. I considered using cookies, but decided that authenticated log in where we store the user data in a database (Firestore) is what one would do at Shopify.
+- Animations for loading. Note that I have added a debounce of 1000 ms in order to reduce the number of API calls and only make an API call to OMDB once the user is done typing.
+I chose the value of 1000 ms because it also showcases the load state animation.
+- Authentication (Sign up using email, Sign in using email/Google, the feature to reset password).
+- Followed the shopify theme, branding and color palette to create a seamless experience.
+- Dark mode
+
+## Design principles and Best practices
+- Mobile-first design
+- BEM methodology
+- Latest React Hooks best practices
+- Data privacy - API keys stored in a .env file added to .gitignore (I shall be sharing this file with you along with my submission).
+
 
 ## Available Scripts
 
@@ -14,11 +33,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
@@ -27,44 +41,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `firebase login`
+- `firebase init hosting`
+- `specify the build created using yarn build`
+- `firebase deploy`
