@@ -24,7 +24,7 @@ I chose the value of 1000 ms because it also showcases the load state animation.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the 'the-shoppies' directory, you can run:
 
 ### `yarn start`
 
