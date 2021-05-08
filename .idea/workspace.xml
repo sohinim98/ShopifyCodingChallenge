@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a91902d4-c7a8-41a0-8061-83189c55e037" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-shoppies/src/components/Application/Application.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/the-shoppies/src/components/Application/Application.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-shoppies/src/components/Application/Application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/the-shoppies/src/components/Application/Application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-shoppies/src/components/Nominations/Nominations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/the-shoppies/src/components/Nominations/Nominations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-shoppies/src/components/Results/Results.scss" beforeDir="false" afterPath="$PROJECT_DIR$/the-shoppies/src/components/Results/Results.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/the-shoppies/src/components/Search/Search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/the-shoppies/src/components/Search/Search.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sCQfjs35E0p3TogVpO4dHxymky" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/the-shoppies/src/components/Application" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/the-shoppies/public" />
+      <recent name="$PROJECT_DIR$/the-shoppies/src/assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/the-shoppies/src/components/Application" />
+      <recent name="$PROJECT_DIR$/the-shoppies/src/assets" />
+      <recent name="$PROJECT_DIR$/the-shoppies/src/components" />
+      <recent name="$PROJECT_DIR$/the-shoppies" />
+      <recent name="$PROJECT_DIR$/the-shoppies/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a91902d4-c7a8-41a0-8061-83189c55e037" name="Default Changelist" comment="" />
+      <created>1620374203401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620374203401</updated>
+      <workItem from="1620374204510" duration="34485000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="597" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620412028350">
+      <screen x="0" y="25" width="1792" height="1019" />
+    </state>
+    <state x="597" y="366" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1620398281576" />
+    <state x="597" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1019@0.25.1792.1019" timestamp="1620412028350" />
+    <state x="405" y="196" key="SettingsEditor" timestamp="1620397606525">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="405" y="196" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1620397606525" />
+    <state x="597" y="315" width="597" height="582" key="find.popup" timestamp="1620459426613">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="597" y="315" width="597" height="582" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1620459426613" />
+    <state x="597" y="312" width="597" height="490" key="find.popup/0.25.1792.1019@0.25.1792.1019" timestamp="1620415746225" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1620454374885">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1620454374885" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.25.1792.1019@0.25.1792.1019" timestamp="1620454370583" />
+  </component>
+</project>
