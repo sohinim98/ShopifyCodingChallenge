@@ -23,6 +23,10 @@ export const Results = (props) => {
     }, [setNominationsList, setNominationsNum, user.uid]);
 
     useEffect(() => {
+        saveContent(user, { nominationsList: nominationsList, nominationsNum: nominationsNum});
+    }, [nominationsList, nominationsNum]);
+
+    useEffect(() => {
         if (props.movies === 'Movie not found!') {
             setMovieNotFound('No matches found!');
         } else if (props.movies === 'Error fetching movies!') {
@@ -49,7 +53,6 @@ export const Results = (props) => {
             }
             setNominationsNum(nominationsNum-1);
         }
-        saveContent(user, { nominationsList: nominationsList, nominationsNum: nominationsNum});
     }
     if (props.query.length > 0) {
         return (
