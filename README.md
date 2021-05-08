@@ -13,7 +13,7 @@ Shopify Web Developer Intern Challenge - Fall 2021
 
 ## Bonus features
 - Save nomination lists if the user leaves the page/logs out. I considered using cookies, but decided that authenticated log in where we store the user data in a database (Firestore) is what one would do at Shopify.
-- Animations for loading. Note that I have added a debounce of 1000 ms in order to reduce the number of API calls and only make an API call to OMDB once the user is done typing.
+- Animations for loading and zero states. Note that I have added a debounce of 1000 ms in order to reduce the number of API calls and only make an API call to OMDB once the user is done typing.
 I chose the value of 1000 ms because it also showcases the load state animation.
 - Authentication (Sign up using email, Sign in using email/Google, the feature to reset password).
 - Followed the shopify theme, branding and color palette to create a seamless experience.
