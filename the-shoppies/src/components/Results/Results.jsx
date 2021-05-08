@@ -1,16 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './Results.scss';
 import Nominations from '../Nominations/Nominations'
+import { saveContent, getUserDocument } from '../../firebase';
+import { UserContext } from '../../providers/UserProvider';
 
 export const Results = (props) => {
+    const user = useContext(UserContext);
     const [movieResults, setMovieResults] = useState('');
     const [nominationsList, setNominationsList] = useState([]);
     const [nominationsNum, setNominationsNum] = useState(0);
+
+    useEffect(() => {
+        (async () => {
+            let onLoadDocument = await getUserDocument(user.uid);
+            if(onLoadDocument.content !== undefined) {
+                setNominationsList(onLoadDocument.content.nominationsList);
+                setNominationsNum(onLoadDocument.content.nominationsNum);
+            }
+        })()
+    }, [setNominationsList, setNominationsNum, user.uid]);
+
     useEffect(() => {
         setMovieResults(props.movies);
     }, [props.movies]);
     const editNominations = (movie, op) => {
-        console.log('hi', op);
         if (op === 'add') {
             if (nominationsNum < 5 ) {
                 setNominationsList([...nominationsList, movie]);
@@ -26,6 +39,7 @@ export const Results = (props) => {
             }
             setNominationsNum(nominationsNum-1);
         }
+        saveContent(user, { nominationsList: nominationsList, nominationsNum: nominationsNum});
     }
     if (props.query.length > 0) {
         return (
@@ -49,7 +63,7 @@ export const Results = (props) => {
             </section>
         );
     } else {
-        return (<Nominations nominationsList={nominationsList}/>)
+        return (<Nominations nominationsList={nominationsList} editNominations={editNominations} nominationsNum={nominationsNum}/>)
     }
 
 }

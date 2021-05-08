@@ -10,7 +10,7 @@
   width: 388px;
 
   .nominations--header {
-    padding-left: var(--spacer--sm);
+    padding: var(--spacer--sm) 0 0 var(--spacer--sm);
   }
   .nominations--banner {
     background: var(--base--green);

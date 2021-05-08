@@ -57,20 +57,20 @@ export const getUserDocument = async uid => {
     console.error("Error fetching user", error);
   }
 };
-//
-// export const saveContent  = async (user, content) => {
-//   if (!user) return;
-//
-//   const dataRef = firestore.doc(`users/${user.uid}`);
-//   const snapshot = await dataRef.get();
-//
-//   if (snapshot.exists) {
-//     try {
-//       await dataRef.update({
-//         content: content,
-//       });
-//     } catch (error) {
-//       console.error("Error creating content document", error);
-//     }
-//   }
-// };
+
+export const saveContent  = async (user, content) => {
+  if (!user) return;
+
+  const dataRef = firestore.doc(`users/${user.uid}`);
+  const snapshot = await dataRef.get();
+
+  if (snapshot.exists) {
+    try {
+      await dataRef.update({
+        content: content,
+      });
+    } catch (error) {
+      console.error("Error creating content document", error);
+    }
+  }
+};
