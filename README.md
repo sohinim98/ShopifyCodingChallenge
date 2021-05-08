@@ -20,9 +20,10 @@ I chose the value of 1000 ms because it also showcases the load state animation.
 - Dark mode/Light mode toggle!
 
 ## Design principles and Best practices
-- Mobile-first design
-- BEM methodology
-- Latest React Hooks best practices
+- Mobile-first approach.
+- Responsive design.
+- BEM methodology.
+- Latest React Hooks best practices.
 - Data privacy - API keys stored in a .env file added to .gitignore (I shall be sharing this file with you along with my submission).
 
 
