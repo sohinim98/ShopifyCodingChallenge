@@ -10,7 +10,7 @@ export const Search = () => {
     const [movies, setMovies] = useState('');
     // Make API call 500 ms after the user stops typing
     useEffect(() => {
-        const timeOutId = setTimeout(() => fetchMovies(query), 500);
+        const timeOutId = setTimeout(() => fetchMovies(query), 1000);
         return () => clearTimeout(timeOutId);
     }, [query]);
 
@@ -30,6 +30,7 @@ export const Search = () => {
                 })
                 .catch(error => {
                     console.log('error', error);
+                    setMovies('Error fetching movies!');
                 })
         }
     }

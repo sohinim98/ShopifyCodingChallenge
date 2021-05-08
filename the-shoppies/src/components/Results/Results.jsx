@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import ReactLoading from 'react-loading';
 import './Results.scss';
 import Nominations from '../Nominations/Nominations'
 import { saveContent, getUserDocument } from '../../firebase';
@@ -24,6 +25,8 @@ export const Results = (props) => {
     useEffect(() => {
         if (props.movies === 'Movie not found!') {
             setMovieNotFound('No matches found!');
+        } else if (props.movies === 'Error fetching movies!') {
+            setMovieNotFound('Error fetching movies!');
         }
         else {
             setMovieNotFound('');
@@ -53,8 +56,8 @@ export const Results = (props) => {
             <section className="results-container">
                 <div className="results">
                     <h2>Results for "{props.query}"</h2>
-                    { ((typeof movieResults === "object" && movieResults.length > 0) || movieNotFound === 'No matches found!') ? (
-                        movieNotFound === 'No matches found!' ?  (<p>{movieNotFound}</p>) :  (<ul className="results--list">
+                    { ((typeof movieResults === "object" && movieResults.length > 0) || movieNotFound === 'No matches found!' || movieNotFound === 'Error fetching movies!') ? (
+                        (movieNotFound === 'No matches found!' || movieNotFound === 'Error fetching movies!') ?  (<p>{movieNotFound}</p>) :  (<ul className="results--list">
                             { movieResults.map(movie => {
                                 return (
                                     <li className="results--entry">
@@ -64,7 +67,7 @@ export const Results = (props) => {
                                 )
                             })}
                         </ul>)
-                    ) : 'Loading...'}
+                    ) : <ReactLoading type='spin' color={'#96bf48'} height={'20%'} width={'20%'} />}
                 </div>
                 <Nominations nominationsList={nominationsList} editNominations={editNominations} nominationsNum={nominationsNum}/>
             </section>
