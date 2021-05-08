@@ -4,7 +4,10 @@
 .profile {
   background: var(--base--green);
   color: var(--base--white);
-
+  .profile--toggle {
+    float: right;
+    margin: var(--spacer--sm) var(--spacer--sm) 0 0;
+  }
   .profile--avatar {
     border-radius: 50%;
     height: 200px;
@@ -24,6 +27,13 @@
     min-width: 65px;
     padding: 10px 20px;
     text-transform: uppercase;
+  }
+}
+
+.profile--dark-mode {
+  filter: invert(1);
+  img, video {
+    filter: unset;
   }
 }
 

@@ -27,8 +27,11 @@
     width: 1012px;
   }
   .search--icon {
-    height: 25px;
-    padding-right: var(--spacer--sm);
+    background: var(--base--white);
+    border-radius: var(--border-radius--xs);
+    height: 30px;
+    padding: 2px;
+    margin-right: var(--spacer--sm);
   }
 }
 /* Desktop */
