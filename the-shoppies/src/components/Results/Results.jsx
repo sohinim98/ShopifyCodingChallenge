@@ -63,8 +63,8 @@ export const Results = (props) => {
                         (movieNotFound === 'No matches found!' || movieNotFound === 'Error fetching movies!') ?  (<p>{movieNotFound}</p>) :  (<ul className="results--list">
                             { movieResults.map(movie => {
                                 return (
-                                    <li className="results--entry">
-                                        <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
+                                    <li className="results--entry" key={movie.imdbID}>
+                                        <p>{movie.Title} ({movie.Year})</p>
                                         <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
                                     </li>
                                 )

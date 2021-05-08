@@ -14,8 +14,8 @@ export const Nominations = (props) => {
             <ul className="nominations--list">
                 {nominationsList.map(movie => {
                     return (
-                        <li className="nominations--entry">
-                            <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
+                        <li className="nominations--entry" key={movie.imdbID}>
+                            <p>{movie.Title} ({movie.Year})</p>
                             <button onClick={() => props.editNominations(movie, 'remove')} className="nominations--button">Remove</button>
                         </li>
                     )
