@@ -13,11 +13,11 @@ export const Application = () => {
   return (
         user ?
             <section className="main">
+                <ProfilePage />
                 <div className="main--content">
                     <h1 className="main--header">The Shoppies</h1>
                     <Search />
                 </div>
-                <ProfilePage />
             </section>
       :
         <Router>

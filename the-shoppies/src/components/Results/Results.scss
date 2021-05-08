@@ -2,7 +2,7 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 80%;
   width: 1048px;
   .results {
     background: var(--base--white);
@@ -10,8 +10,8 @@
     border-radius: var(--border-radius--sm);
     display: flex;
     flex-direction: column;
-    margin: var(--spacer--sm);
-    max-width: 90%;
+    margin-top: var(--spacer--sm);
+    max-width: 100%;
     padding: var(--spacer--sm);
     width: 548px;
     .results--list {
@@ -44,5 +44,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin: var(--spacer--sm) auto;
+    .results {
+      margin: 0 var(--spacer--sm) 0 0;
+    }
   }
 }

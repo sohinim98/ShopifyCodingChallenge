@@ -3,10 +3,7 @@
   background: var(--base--white);
   border: 1px solid var(--border--color);
   border-radius: var(--border-radius--sm);
-  display: flex;
-  flex-direction: column;
-  max-width: 90%;
-  margin: var(--spacer--sm) auto;
+  max-width: 80%;
   width: 1048px;
 
   .search--header {
@@ -14,7 +11,7 @@
   }
   .search--header, .search--bar {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 80%;
     width: 1012px;
   }
   .search--bar {
@@ -32,5 +29,11 @@
   .search--icon {
     height: 25px;
     padding-right: var(--spacer--sm);
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .search {
+    margin: var(--spacer--lg) auto;
   }
 }

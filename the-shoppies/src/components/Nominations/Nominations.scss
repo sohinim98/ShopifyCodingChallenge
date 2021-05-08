@@ -5,8 +5,8 @@
   border-radius: var(--border-radius--sm);
   display: flex;
   flex-direction: column;
-  margin: var(--spacer--sm);
-  max-width: 90%;
+  margin: var(--spacer--sm) 0;
+  max-width: 100%;
   width: 388px;
 
   .nominations--header {
@@ -42,6 +42,6 @@
 /* Desktop */
 @media only screen and (min-width: 1024px) {
   .nominations {
-    margin: 0 auto var(--spacer--sm);
+    margin: 0;
   }
 }
