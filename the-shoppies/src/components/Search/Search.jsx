@@ -17,7 +17,7 @@ export const Search = () => {
     const fetchMovies = event => {
         {
             axios
-                .get(`http://www.omdbapi.com/?apikey=83ecb157&s=${event}&type=movie`)
+                .get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${event}&type=movie`)
                 .then(res => {
                     if (res.status === 200) {
                         const resUnique =  res.data.Search.filter((movie, index) => res.data.Search.findIndex(obj => obj.imdbID === movie.imdbID) === index);
