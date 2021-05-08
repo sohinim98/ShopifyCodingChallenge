@@ -17,7 +17,7 @@ Shopify Web Developer Intern Challenge - Fall 2021
 I chose the value of 1000 ms because it also showcases the load state animation.
 - Authentication (Sign up using email, Sign in using email/Google, the feature to reset password).
 - Followed the shopify theme, branding and color palette to create a seamless experience.
-- Dark mode
+- Dark mode/Light mode toggle!
 
 ## Design principles and Best practices
 - Mobile-first design
