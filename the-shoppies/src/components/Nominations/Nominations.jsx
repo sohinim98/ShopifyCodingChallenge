@@ -11,7 +11,7 @@ export const Nominations = (props) => {
         <section className="nominations">
             <h2 className="nominations--header">Nominations</h2>
             {props.nominationsNum === 5 ? (<h3 className="nominations--banner">You've nominated all 5 films!</h3>) : null}
-            <ul>
+            <ul className="nominations--list">
                 {nominationsList.map(movie => {
                     return (
                         <li className="nominations--entry">

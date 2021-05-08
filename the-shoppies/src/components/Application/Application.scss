@@ -5,6 +5,7 @@
 }
 .main {
   display: flex;
+  flex-direction: column;
   .main--content {
     max-width: 80%;
     width: 1048px;
@@ -12,5 +13,11 @@
     .main--header {
       padding: var(--spacer--lg) 0 0 var(--spacer--lg);
     }
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .main {
+    flex-direction: row;
   }
 }

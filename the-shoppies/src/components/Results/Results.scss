@@ -1,9 +1,8 @@
 @import "../../vars.scss";
 .results-container {
-  align-items: flex-start;
   display: flex;
-  justify-content: space-between;
-  margin: var(--spacer--sm) auto;
+  flex-direction: column;
+  max-width: 100%;
   width: 1048px;
   .results {
     background: var(--base--white);
@@ -11,24 +10,39 @@
     border-radius: var(--border-radius--sm);
     display: flex;
     flex-direction: column;
+    margin: var(--spacer--sm);
     max-width: 90%;
     padding: var(--spacer--sm);
     width: 548px;
-
-    .results--entry {
-      display: flex;
-      &::before {
-        content: '\2022';
-        font-size: 38px;
-        padding-right: 2px;
-      }
-      .results--button {
-        border-radius: var(--border-radius--sm);
-        cursor: pointer;
-        height: 36px;
-        margin-left: var(--spacer--sm);
+    .results--list {
+      padding: 0 8px;
+      .results--entry {
+        align-items: center;
+        display: flex;
+        &::before {
+          content: '\2022';
+          font-size: 38px;
+          padding: 0 2px 2px 0;
+        }
+        .results--button {
+          border-color: var(--border--color);
+          border-radius: var(--border-radius--xs);
+          cursor: pointer;
+          height: 36px;
+          margin-left: var(--spacer--sm);
+          padding: 0 var(--spacer--sm);
+        }
       }
     }
   }
 }
 
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .results-container {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--spacer--sm) auto;
+  }
+}

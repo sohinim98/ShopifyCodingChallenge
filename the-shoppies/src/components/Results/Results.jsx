@@ -14,9 +14,11 @@ export const Results = (props) => {
         (async () => {
             let onLoadDocument = await getUserDocument(user.uid);
             if(onLoadDocument.content !== undefined) {
+                console.log('defined');
                 setNominationsList(onLoadDocument.content.nominationsList);
                 setNominationsNum(onLoadDocument.content.nominationsNum);
             }
+            console.log('entered', nominationsList)
         })()
     }, [setNominationsList, setNominationsNum, user.uid]);
 
@@ -47,12 +49,12 @@ export const Results = (props) => {
                 <div className="results">
                     <h2>Results for "{props.query}"</h2>
                     { movieResults?.length > 0 ? (
-                        <ul>
+                        <ul className="results--list">
                             {movieResults.map(movie  => {
                             return (
                             <li className="results--entry">
                             <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                            <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.includes(movie)}>Nominate</button>
+                            <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
                             </li>
                             )
                         })}

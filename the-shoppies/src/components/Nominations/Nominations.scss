@@ -5,8 +5,8 @@
   border-radius: var(--border-radius--sm);
   display: flex;
   flex-direction: column;
+  margin: var(--spacer--sm);
   max-width: 90%;
-  margin: 0 auto var(--spacer--sm);
   width: 388px;
 
   .nominations--header {
@@ -17,18 +17,31 @@
     color: var(--base--white);
     padding: var(--spacer--sm);
   }
-  .nominations--entry {
-    display: flex;
-    &::before {
-      content: '\2022';
-      font-size: 38px;
-      padding-right: 2px;
+  .nominations--list {
+    padding: 0 8px;
+    .nominations--entry {
+      align-items: center;
+      display: flex;
+      &::before {
+        content: '\2022';
+        font-size: 38px;
+        padding: 0 2px 2px 0;
+      }
+      .nominations--button {
+        border-color: var(--border--color);
+        border-radius: var(--border-radius--xs);
+        cursor: pointer;
+        height: 36px;
+        margin-left: var(--spacer--sm);
+        padding: 0 var(--spacer--sm);
+      }
     }
-    .nominations--button {
-      border-radius: var(--border-radius--sm);
-      cursor: pointer;
-      height: 36px;
-      margin-left: var(--spacer--sm);
-    }
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .nominations {
+    margin: 0 auto var(--spacer--sm);
   }
 }
