@@ -1,5 +1,5 @@
 # ShopifyCodingChallenge
-Shopify Web Developer Intern Challenge - Fall 2021
+[Shopify Web Developer Intern Challenge - Fall 2021](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#heading=h.2kwy1hgbxmq)
 
 ### The following commands are to be run from the 'the-shoppies' directory
 
