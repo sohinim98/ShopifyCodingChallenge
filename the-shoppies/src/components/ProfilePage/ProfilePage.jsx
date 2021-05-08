@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 const ProfilePage = (props) => {
   const user = useContext(UserContext);
-  const {photoURL, displayName, email} = user;
+  const {photoURLUncompressed, displayName, email} = user;
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const ProfilePage = (props) => {
           <img
             className="profile--avatar"
             alt="user avatar"
-            src={photoURL ? photoURL : avatar }
+            src={photoURLUncompressed ? photoURLUncompressed : avatar }
           />
         <div className="profile--content">
           <h2>{displayName}</h2>

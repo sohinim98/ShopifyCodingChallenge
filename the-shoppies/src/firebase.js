@@ -31,11 +31,12 @@ export const generateUserDocument = async (user, additionalData) => {
 
   if (!snapshot.exists) {
     const { email, displayName, photoURL } = user;
+    const photoURLUncompressed = photoURL.replace('=s96-c', '');
     try {
       await userRef.set({
         displayName,
         email,
-        photoURL,
+        photoURLUncompressed,
         ...additionalData
       });
     } catch (error) {
