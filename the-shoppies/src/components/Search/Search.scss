@@ -18,7 +18,7 @@
     border-radius: 20px;
     display: flex;
     height: 33px;
-    margin: var(--spacer--sm) auto;
+    margin: var(--spacer--sm) 0;
     padding: 4px 8px;
   }
   .search--input {
@@ -38,5 +38,8 @@
 @media only screen and (min-width: 1024px) {
   .search {
     margin: var(--spacer--lg) auto;
+    .search--bar {
+      margin: var(--spacer--sm) auto;
+    }
   }
 }

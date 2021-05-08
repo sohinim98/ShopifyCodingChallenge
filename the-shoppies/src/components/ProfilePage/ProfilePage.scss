@@ -4,6 +4,7 @@
 .profile {
   background: var(--base--green);
   color: var(--base--white);
+  padding-bottom: var(--spacer--sm);
   .profile--toggle {
     float: right;
     margin: var(--spacer--sm) var(--spacer--sm) 0 0;
