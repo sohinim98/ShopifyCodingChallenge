@@ -9,7 +9,7 @@ export const Results = (props) => {
     const [movieResults, setMovieResults] = useState('');
     const [nominationsList, setNominationsList] = useState([]);
     const [nominationsNum, setNominationsNum] = useState(0);
-    const [movieNotFound, setMovieNotFound] = useState(false);
+    const [movieNotFound, setMovieNotFound] = useState('');
 
     useEffect(() => {
         (async () => {
@@ -22,9 +22,13 @@ export const Results = (props) => {
     }, [setNominationsList, setNominationsNum, user.uid]);
 
     useEffect(() => {
-        console.log('see', props.movies)
-        props.movies === 'Movie not found!' ? setMovieNotFound(true) : setMovieNotFound(false);
-        setMovieResults(props.movies);
+        if (props.movies === 'Movie not found!') {
+            setMovieNotFound('No matches found!');
+        }
+        else {
+            setMovieNotFound('');
+            setMovieResults(props.movies);
+        }
     }, [props.movies]);
     const editNominations = (movie, op) => {
         if (op === 'add') {
@@ -49,17 +53,17 @@ export const Results = (props) => {
             <section className="results-container">
                 <div className="results">
                     <h2>Results for "{props.query}"</h2>
-                    { movieResults?.length > 0 ? (
-                        movieNotFound === true ?  (<p>{movieResults}</p>) :  (<ul className="results--list">
-                        {movieResults.map(movie  => {
-                            return (
-                                <li className="results--entry">
-                                    <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                                    <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
-                                </li>
-                            )
-                        })}
-                    </ul>)
+                    { ((typeof movieResults === "object" && movieResults.length > 0) || movieNotFound === 'No matches found!') ? (
+                        movieNotFound === 'No matches found!' ?  (<p>{movieNotFound}</p>) :  (<ul className="results--list">
+                            { movieResults.map(movie => {
+                                return (
+                                    <li className="results--entry">
+                                        <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
+                                        <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
+                                    </li>
+                                )
+                            })}
+                        </ul>)
                     ) : 'Loading...'}
                 </div>
                 <Nominations nominationsList={nominationsList} editNominations={editNominations} nominationsNum={nominationsNum}/>
@@ -72,13 +76,3 @@ export const Results = (props) => {
 }
 
 export default Results
-
-// (movieResults === '' || movieResults === null || movieResults === undefined) ? 'Loading...' : (
-//     <div>{movieResults.map(movie => {
-//         return (
-//             <div key={movie.imdbID}>
-//                 {movie.Title} ({movie.Year})
-//             </div>
-//         )
-//     })}</div>
-// )

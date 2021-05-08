@@ -22,9 +22,10 @@ export const Search = () => {
                     if (res.status === 200) {
                         if (res.data.Response === "False") {
                             setMovies(res.data.Error);
+                        } else {
+                            const resUnique =  res.data.Search.filter((movie, index) => res.data.Search.findIndex(obj => obj.imdbID === movie.imdbID) === index);
+                            setMovies(resUnique);
                         }
-                        const resUnique =  res.data.Search.filter((movie, index) => res.data.Search.findIndex(obj => obj.imdbID === movie.imdbID) === index);
-                        setMovies(resUnique);
                     }
                 })
                 .catch(error => {
