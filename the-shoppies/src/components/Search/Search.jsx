@@ -20,6 +20,9 @@ export const Search = () => {
                 .get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${event}&type=movie`)
                 .then(res => {
                     if (res.status === 200) {
+                        if (res.data.Response === "False") {
+                            setMovies(res.data.Error);
+                        }
                         const resUnique =  res.data.Search.filter((movie, index) => res.data.Search.findIndex(obj => obj.imdbID === movie.imdbID) === index);
                         setMovies(resUnique);
                     }

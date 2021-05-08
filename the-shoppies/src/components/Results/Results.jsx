@@ -9,20 +9,21 @@ export const Results = (props) => {
     const [movieResults, setMovieResults] = useState('');
     const [nominationsList, setNominationsList] = useState([]);
     const [nominationsNum, setNominationsNum] = useState(0);
+    const [movieNotFound, setMovieNotFound] = useState(false);
 
     useEffect(() => {
         (async () => {
             let onLoadDocument = await getUserDocument(user.uid);
             if(onLoadDocument.content !== undefined) {
-                console.log('defined');
                 setNominationsList(onLoadDocument.content.nominationsList);
                 setNominationsNum(onLoadDocument.content.nominationsNum);
             }
-            console.log('entered', nominationsList)
         })()
     }, [setNominationsList, setNominationsNum, user.uid]);
 
     useEffect(() => {
+        console.log('see', props.movies)
+        props.movies === 'Movie not found!' ? setMovieNotFound(true) : setMovieNotFound(false);
         setMovieResults(props.movies);
     }, [props.movies]);
     const editNominations = (movie, op) => {
@@ -49,16 +50,16 @@ export const Results = (props) => {
                 <div className="results">
                     <h2>Results for "{props.query}"</h2>
                     { movieResults?.length > 0 ? (
-                        <ul className="results--list">
-                            {movieResults.map(movie  => {
+                        movieNotFound === true ?  (<p>{movieResults}</p>) :  (<ul className="results--list">
+                        {movieResults.map(movie  => {
                             return (
-                            <li className="results--entry">
-                            <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
-                            <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
-                            </li>
+                                <li className="results--entry">
+                                    <p key={movie.imdbID}>{movie.Title} ({movie.Year})</p>
+                                    <button onClick={() => editNominations(movie, 'add')} className="results--button" disabled={nominationsList.some(entry => entry.imdbID === movie.imdbID)}>Nominate</button>
+                                </li>
                             )
                         })}
-                        </ul>
+                    </ul>)
                     ) : 'Loading...'}
                 </div>
                 <Nominations nominationsList={nominationsList} editNominations={editNominations} nominationsNum={nominationsNum}/>
